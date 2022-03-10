@@ -1,9 +1,9 @@
 import { GetStaticProps } from "next";
 import { useEffect } from "react";
-import { UserService } from "../../node/protocol/user.protocol";
-import { getService } from "../../node/rpc";
+import { UserService } from "../../server/protocol/user.protocol";
+import { getService } from "../../server/rpc";
 
-export default function about() {
+export default function About() {
   useEffect(() => {
     const userService = getService<UserService>(UserService);
 

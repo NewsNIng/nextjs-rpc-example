@@ -4,7 +4,7 @@ import "../../styles/globals.css";
 // client don't need register
 if (typeof window === "undefined") {
   // here, register rpc services.
-  import("../node/services");
+  import("../server/services");
 }
 
 function MyApp({ Component, pageProps }: AppProps) {

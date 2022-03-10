@@ -1,7 +1,7 @@
 import type { GetServerSideProps, GetStaticProps } from "next";
 import { useEffect, useState } from "react";
-import { User, UserService } from "../node/protocol/user.protocol";
-import { getService } from "../node/rpc";
+import { User, UserService } from "../server/protocol/user.protocol";
+import { getService } from "../server/rpc";
 
 export const getServerSideProps: GetServerSideProps = async () => {
   // server rpc

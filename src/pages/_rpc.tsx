@@ -1,5 +1,5 @@
 import { GetServerSideProps } from "next";
-import { rpcGet } from "../node/rpc";
+import { rpcGet } from "../server/rpc";
 
 export default function _RPC() {
   return null;
