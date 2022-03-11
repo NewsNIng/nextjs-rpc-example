@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import "../../styles/globals.css";
+import "tailwindcss/tailwind.css";
 
 // client don't need register
 if (typeof window === "undefined") {

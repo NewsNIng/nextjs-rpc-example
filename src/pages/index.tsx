@@ -28,7 +28,7 @@ export default function Home({ list = [] }: { list?: User[] }) {
   const [userList, setUserList] = useState(list);
   useEffect(() => {
     setTimeout(() => {
-      // client rpc 
+      // client rpc
       const userService = getService<UserService>(UserService);
       userService.list(10).then((data) => {
         setUserList(data);
@@ -37,15 +37,19 @@ export default function Home({ list = [] }: { list?: User[] }) {
   }, []);
   return (
     <div>
-      <h1>Header</h1>
-      {userList.length}
-      {userList.map((user, index) => {
-        return (
-          <div key={user.id + index}>
-            {user.name}: {user.age}
-          </div>
-        );
-      })}
+      <h1 className="text-4xl font-bold h-24 px-6 bg-lime-300 flex items-center">
+        Header
+      </h1>
+      <div className="px-6 py-4 text-xl text-gray-600">
+        {userList.length}
+        {userList.map((user, index) => {
+          return (
+            <div key={user.id + index}>
+              {user.name}: {user.age}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
