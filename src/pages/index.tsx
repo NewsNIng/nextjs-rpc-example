@@ -35,6 +35,7 @@ export default function Home({ list = [] }: { list?: User[] }) {
       });
     }, 1000);
   }, []);
+
   return (
     <div>
       <h1 className="text-4xl font-bold h-24 px-6 bg-lime-300 flex items-center">
